@@ -181,7 +181,7 @@ public:
 		auto p = getLocalPoint(nullptr, screenPos);
 
 		for (auto b : buttons)
-			b->setIsMouseOver(b->contains(b->getLocalPoint(this, p)));
+			b->setIsMouseOver(b->getScreenBounds().contains(screenPos));
 		
 		repaint();
 	}
